@@ -207,7 +207,21 @@
   }
 
   // ==================== Инициализация состояния ====================
-  const saved = loadSavedData();
+  const saved = loadSavedData() || {
+    score: 0,
+    wrong: 0,
+    streak: 0,
+    bestStreak: 0,
+    history: [],
+    operandCount: 2,
+    memberSettings: [
+      { min: 1, max: 10 },
+      { min: 1, max: 10 },
+    ],
+    operationSettings: ["random"],
+    lastProblem: null,
+    theme: "light",
+  };
 
   let score = saved ? saved.score : 0;
   let wrong = saved ? saved.wrong : 0;
