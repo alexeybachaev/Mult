@@ -78,7 +78,7 @@
                 border-radius:${Math.random() > 0.5 ? "50%" : "3px"};
                 animation:confetti-fall ${duration}s ease-out ${delay}s forwards;
                 --dx:${dx}px;--dy:${dy}px;--rot:${rotation}deg;
-            `;
+                `;
       container.appendChild(piece);
     }
 
